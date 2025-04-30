@@ -548,7 +548,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="font-medium text-lg">Acacia Retreat</h3>
-                <p className="text-gray-900 font-medium">$3,500,000</p>
+                <p className="text-gray-900 font-medium">Rs 3,500,000</p>
               </div>
 
               <div className="min-w-[280px] md:min-w-[350px] snap-start opacity-60">
@@ -562,7 +562,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="font-medium text-lg">Modern Villa</h3>
-                <p className="text-gray-900 font-medium">$4,200,000</p>
+                <p className="text-gray-900 font-medium">Rs 4,200,000</p>
               </div>
 
               <div className="min-w-[280px] md:min-w-[350px] snap-start opacity-60">
@@ -576,7 +576,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="font-medium text-lg">Coastal Mansion</h3>
-                <p className="text-gray-900 font-medium">$5,800,000</p>
+                <p className="text-gray-900 font-medium">Rs 5,800,000</p>
               </div>
             </div>
 
@@ -644,7 +644,7 @@ export default function Home() {
                 <h2 className="text-2xl md:text-3xl font-medium mb-4">
                   Step into a world where exceptional design and timeless luxury meet.
                 </h2>
-                <Button variant="outline" className="rounded-full text-white border-white hover:bg-white/20">
+                <Button variant="outline" className="rounded-full text-black border-white hover:bg-white/20">
                   Explore our properties
                 </Button>
               </div>
@@ -824,7 +824,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-sky-100">
+      <section className="py-20 px-4 bg-gray-100">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-medium mb-4">
             Your dream
