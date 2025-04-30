@@ -50,7 +50,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/" className="text-black text-xl font-playfair font-light">
-            SHUNYATAM
+            SHU.NYATAM
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -82,7 +82,7 @@ export default function Navbar() {
           >
             <div className="flex justify-between items-center p-6 border-b">
               <Link href="/" className="text-black text-xl font-playfair font-light">
-                SHUNYATAM
+                SHU.NYATAM
               </Link>
               <button onClick={toggleMenu} aria-label="Close menu">
                 <X size={24} />

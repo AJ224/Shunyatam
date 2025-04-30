@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { ChevronRight, Play } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import CleanEllipticalCarousel from "@/components/CleanEllipticalCarousel";
 
 
 export default function Home() {
@@ -23,9 +24,9 @@ export default function Home() {
   const [useFallback, setUseFallback] = useState(false)
 
   // Try to use the main audio hook first
-  const mainAudio = useAudio("/sounds/ambient.mp3", { startMuted: true })
+  const mainAudio = useAudio("sounds/ambient.mp3", { startMuted: true })
   // Also initialize the fallback
-  const fallbackAudio = useAudioFallback("/sounds/ambient.mp3", { startMuted: true })
+  const fallbackAudio = useAudioFallback("sounds/ambient.mp3", { startMuted: true })
 
   // Use the appropriate audio controller based on whether we need the fallback
   const { toggleAudio, isPlaying, error, isLoaded } = useFallback ? fallbackAudio : mainAudio
@@ -87,7 +88,7 @@ export default function Home() {
       description: "The pinnacle of creation, where beauty meets function",
     },
     {
-      name: "Shunyatam",
+      name: "Shu.nyatam",
       description: "Where emptiness and form become one",
     },
   ]
@@ -432,47 +433,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Content Sections - Immersive Style */}
-      <section className="immersive-section">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <ScrollObserver className="fade-in">
-            <InkTitle className="mb-16 text-center">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl">Our Philosophy</h2>
-            </InkTitle>
-          </ScrollObserver>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-            <ScrollObserver className="fade-in md:col-span-5">
-              <div className="space-y-6">
-                <p className="text-black/70 leading-relaxed">
-                  At Shunyatam Design Labs, we believe that architecture is not merely about constructing buildings, but
-                  about creating spaces that resonate with the human spirit. Our design philosophy is rooted in the
-                  concept of "Shunyata" – the profound understanding of emptiness as potential.
-                </p>
-                <p className="text-black/70 leading-relaxed">
-                  We approach each project as a journey from emptiness to form, allowing the essence of space to guide
-                  our creative process. Through this mindful approach, we create architecture that is not only visually
-                  striking but also emotionally resonant and functionally impeccable.
-                </p>
-              </div>
-            </ScrollObserver>
-
-            <ScrollObserver className="fade-in md:col-span-7">
-              <div className="relative">
-                <div className="aspect-square bg-black/5 rounded-lg overflow-hidden immersive-image">
-                  <img
-                    src="/philosophy.gif?height=600&width=600&text=Architectural+Concept"
-                    alt="Architectural concept"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#f0e6d2] rounded-lg -z-10"></div>
-              </div>
-            </ScrollObserver>
-          </div>
-        </div>
-      </section>
-
       <section className="relative h-screen bg-sky-100">
         <div className="absolute inset-0 z-0">
           <Image
@@ -520,6 +480,48 @@ export default function Home() {
           </p>
           <div className="flex justify-center gap-4">
             <Button className="rounded-full bg-black text-white hover:bg-gray-800">Get Started</Button>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Content Sections - Immersive Style */}
+      <section className="immersive-section">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <ScrollObserver className="fade-in">
+            <InkTitle className="mb-16 text-center">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl">Our Philosophy</h2>
+            </InkTitle>
+          </ScrollObserver>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+            <ScrollObserver className="fade-in md:col-span-5">
+              <div className="space-y-6">
+                <p className="text-black/70 leading-relaxed">
+                  At Shunyatam Design Labs, we believe that architecture is not merely about constructing buildings, but
+                  about creating spaces that resonate with the human spirit. Our design philosophy is rooted in the
+                  concept of "Shunyata" – the profound understanding of emptiness as potential.
+                </p>
+                <p className="text-black/70 leading-relaxed">
+                  We approach each project as a journey from emptiness to form, allowing the essence of space to guide
+                  our creative process. Through this mindful approach, we create architecture that is not only visually
+                  striking but also emotionally resonant and functionally impeccable.
+                </p>
+              </div>
+            </ScrollObserver>
+
+            <ScrollObserver className="fade-in md:col-span-7">
+              <div className="relative">
+                <div className="aspect-square bg-black/5 rounded-lg overflow-hidden immersive-image">
+                  <img
+                    src="/philosophy.gif?height=600&width=600&text=Architectural+Concept"
+                    alt="Architectural concept"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#f0e6d2] rounded-lg -z-10"></div>
+              </div>
+            </ScrollObserver>
           </div>
         </div>
       </section>
@@ -652,6 +654,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+
+      <section>
+      <CleanEllipticalCarousel />
       </section>
 
       {/* Insights Section */}
@@ -942,7 +949,7 @@ export default function Home() {
           </ScrollObserver>
         </div>
       </section> */}
-
+{/* 
       <section className="immersive-section bg-[#f8f5f0]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -996,7 +1003,7 @@ export default function Home() {
             </ScrollObserver>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

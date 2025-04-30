@@ -130,7 +130,7 @@ export default function LoadingScreen() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        SHUNYATAM
+        SHU.NYATAM
       </motion.h1>
 
       <div className="loading-bar">

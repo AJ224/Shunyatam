@@ -16,7 +16,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Shunyatam Design Labs",
+  title: "Shu.nyatam Design Labs",
   description: "Architecture studio with a philosophical approach to design",
   generator: "v0.dev",
 }

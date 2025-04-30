@@ -29,7 +29,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        {/* <div>
           <h4 className="text-sm font-medium uppercase tracking-wider mb-6">Contact</h4>
           <ul className="space-y-3 text-white/70 text-sm">
             <li>123 Design Avenue</li>
@@ -38,7 +38,7 @@ export default function Footer() {
             <li className="pt-2">info@shunyatam.com</li>
             <li>+1 (555) 123-4567</li>
           </ul>
-        </div>
+        </div> */}
 
         <div>
           <h4 className="text-sm font-medium uppercase tracking-wider mb-6">Follow Us</h4>
