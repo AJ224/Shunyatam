@@ -144,7 +144,7 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Animation container */}
-      <div ref={containerRef} className="h-[500vh] relative">
+      <div ref={containerRef} className="h-[300vh] relative">
         <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
           {/* Animation Stage: Bindu */}
           <AnimatePresence>
@@ -318,7 +318,7 @@ export default function Home() {
           </AnimatePresence>
 
           {/* Animation Stage: Shringā */}
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {animationStage === 4 && (
               <motion.div
                 className="absolute w-full h-full flex items-center justify-center"
@@ -362,7 +362,7 @@ export default function Home() {
                 </motion.div>
               </motion.div>
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
 
           {/* Animation Stage: End */}
           <AnimatePresence>
@@ -417,7 +417,7 @@ export default function Home() {
           </AnimatePresence>
 
           {/* Stage indicator */}
-          <div className="absolute bottom-10 left-10 flex flex-col gap-2">
+          <div className="absolute bottom-(-10) left-10 flex flex-col gap-2">
             {stages.map((stage, index) => (
               <motion.div
                 key={index}
@@ -462,8 +462,53 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
+{/* 
+      <AnimatePresence>
+            {animationStage === 4 && (
+              <motion.div
+                className="absolute w-full h-full flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <motion.div
+                  className="relative w-full max-w-[1000px] h-[600px] overflow-hidden rounded-lg"
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1.5 }}
+                >
+                  <motion.img
+                    src="/1.webp?height=600&width=1000&text=Architectural+Masterpiece"
+                    alt="Architectural masterpiece"
+                    className="w-full h-full object-cover"
+                    initial={{ filter: "brightness(0.5)" }}
+                    animate={{ filter: "brightness(1)" }}
+                    transition={{ duration: 2 }}
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2, delay: 0.5 }}
+                  />
+                  <motion.div
+                    className="absolute bottom-10 left-10 text-white"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1 }}
+                  >
+                    <h2 className="text-3xl font-light mb-2">Architectural Harmony</h2>
+                    <p className="text-sm font-light max-w-md">
+                      Where form meets function in perfect balance, creating spaces that inspire and elevate the human
+                      experience.
+                    </p>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+           */}
       {/* Vision Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
