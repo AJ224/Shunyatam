@@ -55,11 +55,7 @@ export default function CleanEllipticalCarousel() {
       {/* Main content */}
       <div className="relative w-full h-3/4 flex justify-center items-center">
         {/* Center text (only visible when no image is hovered) */}
-        {activeIndex === null && (
-          <div className="absolute z-50 text-6xl font-bold text-black">
-            Shu.nyatam's Projects
-          </div>
-        )}
+
         
         {/* Center display for active image and title */}
         {activeIndex !== null && (
@@ -74,9 +70,12 @@ export default function CleanEllipticalCarousel() {
             </div>
           </div>
         )}
-        
+
         {/* Elliptical carousel */}
         <div className="relative w-full h-full">
+        { (
+          <h2 className="absolute bottom-[-120px] left-1/2 transform -translate-x-1/2 z-50 text-9xl font-bold text-black text-center whitespace-nowrap">Shu.nyatam's Projects</h2>
+        )}
           {images.map((image, index) => {
             const position = calculatePosition(index, images.length);
             const isActive = activeIndex === index;
